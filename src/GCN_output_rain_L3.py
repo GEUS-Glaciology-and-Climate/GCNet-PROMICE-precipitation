@@ -197,7 +197,7 @@ for i,name in enumerate(names):
                         if do_plot:
                             x.index = pd.to_datetime(x.time)
                             fig, ax = plt.subplots(figsize=(10,8))
-                            ax.plot(x.tp_u, drawstyle='steps-mid',label='precip. rate from precip_l_cor')
+                            ax.plot(x.tp_u, drawstyle='steps-mid',label='precip. rate from precip_u_cor')
                             if flag:
                                 ax.plot(x.tp_l, drawstyle='steps-mid',label='precip. rate from precip_l_cor')
                             ax.set_ylabel('mm')
