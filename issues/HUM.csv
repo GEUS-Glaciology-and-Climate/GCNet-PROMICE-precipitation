@@ -1,0 +1,6 @@
+site,date,level,spurious_precip_rate
+HUM,2022-07-17,u,-0.4
+HUM,2022-07-17,l,-0.4
+HUM,2022-09-09,l,0.0
+HUM,2022-09-10,l,0.0
+HUM,2022-10-16,l,170.8

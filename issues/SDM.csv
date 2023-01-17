@@ -1,0 +1,5 @@
+site,date,level,spurious_precip_rate
+SDM,2021-06-24,u,832.0
+SDM,2021-06-24,l,832.0
+SDM,2021-06-25,l,334.4
+SDM,2021-06-30,l,340.0

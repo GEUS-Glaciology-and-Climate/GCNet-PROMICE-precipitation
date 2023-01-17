@@ -1,0 +1,5 @@
+site,date,level,spurious_precip_rate
+TUN,2022-06-06,u,-0.2
+TUN,2022-06-24,u,-0.1
+TUN,2022-09-04,u,-0.1
+TUN,2022-09-04,l,-0.1
