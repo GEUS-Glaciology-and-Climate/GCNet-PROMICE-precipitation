@@ -197,11 +197,11 @@ for i,name in enumerate(names):
                         if do_plot:
                             x.index = pd.to_datetime(x.time)
                             fig, ax = plt.subplots(figsize=(10,8))
-                            ax.plot(x.tp_u, drawstyle='steps-mid',label='tp_u')
+                            ax.plot(x.tp_u, drawstyle='steps-mid',label='precip. rate from precip_l_cor')
                             if flag:
-                                ax.plot(x.tp_l, drawstyle='steps-mid',label='tp_l')
+                                ax.plot(x.tp_l, drawstyle='steps-mid',label='precip. rate from precip_l_cor')
                             ax.set_ylabel('mm')
-                            plt.legend
+                            plt.legend()
                             plt.setp(ax.xaxis.get_majorticklabels(), rotation=90,ha='center' )
                             plt.title(site+' '+str(year))
                             ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y %b %d'))
@@ -213,7 +213,7 @@ for i,name in enumerate(names):
                             
                             if ly == 'p':
                                 figname='./Figs/'+site+'_'+str(year)+'.png'
-                                plt.savefig(figname, bbox_inches='tight', dpi=150)
+                                plt.savefig(figname, bbox_inches='tight', dpi=100)
         if len(np.array(issues_site))>0:
             issues=pd.DataFrame(columns=['site','date','level','spurious_precip_rate'])
             issues['site']=pd.Series(np.array(issues_site))
