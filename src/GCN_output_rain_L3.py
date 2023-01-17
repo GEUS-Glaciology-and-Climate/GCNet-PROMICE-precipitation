@@ -93,10 +93,11 @@ do_plot=1
 if do_plot:fig, ax = plt.subplots(figsize=(10,10))
 
 for i,name in enumerate(names):
-    if i>=0:
+    # if i>=0:
     # if name=='NUK_Uv3':
     # if name=='QAS_Uv3': # not added yet
     # if name=='QAS_L':
+    if name=='CP1':
     # if name=='DY2':
     # if name=='SWC':
     # if name=='SWC_O':
@@ -125,7 +126,7 @@ for i,name in enumerate(names):
         
         df.index = pd.to_datetime(df.time)
         
-        iyear=2020
+        iyear=2022
         fyear=2022
         # iyear=2022
         n_years=fyear-iyear+1
@@ -157,7 +158,7 @@ for i,name in enumerate(names):
                 x['tp_u']=np.nan
                 for i in range(1,N):
                     x['tp_u'][i]=x['precip_u_cor'][i]-x['precip_u_cor'][i-1]
-                    if x['tp_u'][i]>400 or x['tp_u'][i]<0:
+                    if x['tp_u'][i]>300 or x['tp_u'][i]<-0.1:
                         issues_site.append(site)
                         issues_date.append(df.time[i])
                         issues_p_rate.append(x['tp_u'][i])
@@ -169,7 +170,7 @@ for i,name in enumerate(names):
                     x['tp_l']=np.nan
                     for i in range(1,N):
                         x['tp_l'][i]=x['precip_l_cor'][i]-x['precip_l_cor'][i-1]
-                        if x['tp_l'][i]>400 or x['tp_l'][i]<0:
+                        if x['tp_l'][i]>300 or x['tp_l'][i]<-0.1:
                             issues_site.append(site)
                             issues_date.append(df.time[i])
                             issues_p_rate.append(x['tp_u'][i])
